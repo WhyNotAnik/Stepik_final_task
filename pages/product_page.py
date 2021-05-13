@@ -7,6 +7,7 @@ class ProductPage(BasePage):
         add_to_cart = self.browser.find_element(*ProductPageLocators.ADD_TO_CART)
         add_to_cart.click()
 
+    # product name in message should be equal to added product
     def should_be_message_product_added(self):
         product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME)
         message_product_added = self.browser.find_element(*ProductPageLocators.MESSAGE_PRODUCT_ADDED)
